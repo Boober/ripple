@@ -13,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Characters
+  - Pickups
+  - ActualWalls
+  - Floor
+  - BlueWalls
+  - Blueprint
   - 
   - 
   - 
@@ -40,4 +40,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Blueprint
+    uniqueID: 1617332085
+    locked: 0
+  - name: BlueWalls
+    uniqueID: 227469583
+    locked: 0
+  - name: Floor
+    uniqueID: 3140909725
+    locked: 0
+  - name: ActualWalls
+    uniqueID: 2780330549
+    locked: 0
+  - name: Pickups
+    uniqueID: 1142077897
+    locked: 0
+  - name: Characters
+    uniqueID: 1855316207
     locked: 0
