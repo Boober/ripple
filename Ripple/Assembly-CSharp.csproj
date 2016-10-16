@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\NPCAIv2.cs" />
+     <Compile Include="Assets\NodeDetector.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\NpcAI.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />

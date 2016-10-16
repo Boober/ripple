@@ -11,18 +11,40 @@ public class PlayerController : MonoBehaviour {
     float speed = 10.0f;
     public float moveX = 0;
     public float moveY = 0;
+	public GameObject closestnode;
     float acceleration = 0.1f;
+	public GameObject[] NodesAll;
+	public bool tester = true;
 
     void Start () {
+		NodesAll = GameObject.FindGameObjectsWithTag ("DOORNODE");
+		closestnode = GetClosestNode (NodesAll);
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+	}
+
+	private GameObject GetClosestNode(GameObject[] nodes)
+	{
+		GameObject closest = null;
+		float distance = Mathf.Infinity;
+		Vector3 position = transform.position;
+		foreach (GameObject go in nodes) {
+			Vector3 diff = go.transform.position - position;
+			float curDistance = diff.sqrMagnitude;
+			if (curDistance < distance) {
+				closest = go;
+				distance = curDistance;
+			}
+		}
+		return closest;
 	}
 
     // Update is called once per frame
     void Update()
     {
-        
+		closestnode = GetClosestNode (NodesAll);
     }
+
     void FixedUpdate()
     {
         //Checks for input from either wasd or arrow keys.
@@ -32,8 +54,8 @@ public class PlayerController : MonoBehaviour {
         bool up = wasdControls ? Input.GetKey(KeyCode.W) : Input.GetKey(KeyCode.UpArrow);
 
         //Checks for input from gamepad.
-        float ljoystickx = Input.GetAxis("LeftJoystickX");
-        float ljoysticky = Input.GetAxis("LeftJoystickY");
+        //float ljoystickx = Input.GetAxis("LeftJoystickX");
+        //float ljoysticky = Input.GetAxis("LeftJoystickY");
 
         //Moves the character.
         if (left == right)

@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NPC
+  - DOORNODE
+  - ROOMNODE
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - Floor
   - BlueWalls
   - Blueprint
-  - 
+  - Nodes
   - 
   - 
   - 
