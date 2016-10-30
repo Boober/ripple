@@ -152,7 +152,9 @@ public class WatsonAI : MonoBehaviour {
 	}
 
 	IEnumerator Example() {
-		yield return new WaitForSeconds(15);
+		yield return new WaitForSeconds(3);
+		Vector3 spawnDistance = player.transform.position - transform.position;
+		transform.position = transform.position + spawnDistance / 15;
 	}
 
 	void FixedUpdate() {
@@ -169,8 +171,6 @@ public class WatsonAI : MonoBehaviour {
 			}
 			else 
 			{
-				Vector3 spawnDistance = player.transform.position - transform.position;
-				transform.position = transform.position + spawnDistance / 15;
 				StartCoroutine (Example ());
 			}
 		} 
