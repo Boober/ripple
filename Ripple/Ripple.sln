@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{C0062863-E3E9-9F67-607A-D1AE9A4299A7}") = "Ripple", "Assembly-CSharp.csproj", "{8ACCD23D-D826-0E4A-2A17-6F14F7F8B698}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ripple.CSharp", "Ripple.CSharp.csproj", "{867F3C87-D3C8-ACCF-C190-E5F81C2FED69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8ACCD23D-D826-0E4A-2A17-6F14F7F8B698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8ACCD23D-D826-0E4A-2A17-6F14F7F8B698}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8ACCD23D-D826-0E4A-2A17-6F14F7F8B698}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8ACCD23D-D826-0E4A-2A17-6F14F7F8B698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867F3C87-D3C8-ACCF-C190-E5F81C2FED69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867F3C87-D3C8-ACCF-C190-E5F81C2FED69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867F3C87-D3C8-ACCF-C190-E5F81C2FED69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867F3C87-D3C8-ACCF-C190-E5F81C2FED69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
