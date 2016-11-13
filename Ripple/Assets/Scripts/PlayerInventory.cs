@@ -24,33 +24,12 @@ public class PlayerInventory : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyUp(KeyCode.T))
-        {
-            addObject("taco");
-            
-        }
-        else if (Input.GetKeyUp(KeyCode.L))
-        {
-            addObject("lightbulb");
-        }
-        else if (Input.GetKeyUp(KeyCode.P))
-        {
-            addObject("paper");
-        }
-        else if (Input.GetKeyUp(KeyCode.K))
-        {
-            addObject("key");
-        }
-        else if(Input.GetKeyUp(KeyCode.R))
-        {
-            removeObject("taco");
-        }
-
+        // removes empty parts of the inventory to make room for new objects
         removeEmpty();
 	}
 
     // removes objects from the inventory bar when the count reaches zero
-    void removeEmpty()
+    public void removeEmpty()
     {
         foreach(string obj in inventory.Keys)
         {
@@ -60,7 +39,9 @@ public class PlayerInventory : MonoBehaviour {
             }
         }
     }
-    void addObject(string obj)
+
+    //method for adding objects to the inventory
+    public void addObject(string obj)
     {
         if (!objects.Contains(obj) && objects.ToArray().Length <= buttonScript.buttonCount)
         {
@@ -69,7 +50,8 @@ public class PlayerInventory : MonoBehaviour {
         inventory[obj].increase();
     }
 
-    void removeObject(string obj)
+    // removing objects from the inventory
+    public void removeObject(string obj)
     {
         inventory[obj].decrease();
     }

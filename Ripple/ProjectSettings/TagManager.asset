@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Item
+  - key
+  - taco
   layers:
   - Default
   - TransparentFX

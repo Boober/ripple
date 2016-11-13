@@ -6,6 +6,13 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	public bool wasdControls;
+    public PlayerInventory playerInv;
+    /// <summary>
+    /// must modify the pickupItems list so that this script knows what objects to consider
+    /// as a pick up item
+    /// </summary>
+
+    public List<string> pickupItems;
 	private Rigidbody2D rb;
 	private Animator anim;
 	float speed = 10.0f;
@@ -24,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 	//		1. have a "Box Collider 2D" component with the "Is Trigger" box checked
 	//		2. be tagged "Item"
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "Item") {
+		if (pickupItems.Contains(other.gameObject.tag)) {
 			Debug.Log ("Over a " + other.name);
 			itemsInRange.Add (other.gameObject);
 		}
@@ -104,8 +111,9 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.E)) {
 			while (itemsInRange.Count > 0) {
 				GameObject item = itemsInRange [0];
-				//This is a good spot to put the code to transfer
-				//the item to the player's inventory
+                //This is a good spot to put the code to transfer
+                //the item to the player's inventory
+                playerInv.addObject(item.tag.ToString());
 				Destroy (item);
 				itemsInRange.Remove(item);
 			}
