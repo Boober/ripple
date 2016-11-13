@@ -26,12 +26,16 @@ public class PlayerController : MonoBehaviour {
     public GameObject[] NodesAll;
     public bool tester = true;
 
+    void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     void Start () {
         NodesAll = GameObject.FindGameObjectsWithTag("DOORNODE");
         closestnode = GetClosestNode(NodesAll);
         rb = GetComponent<Rigidbody2D>();
-		anim = GetComponent<Animator>();
-	}
+    }
 
 
     //Gets the closest Node. :P

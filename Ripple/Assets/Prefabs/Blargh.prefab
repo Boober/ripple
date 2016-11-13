@@ -21,11 +21,11 @@ GameObject:
   - 224: {fileID: 224000011491693286}
   - 212: {fileID: 212000013895085970}
   - 50: {fileID: 50000011629154718}
-  - 95: {fileID: 95000012361266796}
   - 114: {fileID: 114000012496625634}
   - 61: {fileID: 61000014009042598}
   - 223: {fileID: 223000012960925898}
   - 114: {fileID: 114000012073542172}
+  - 95: {fileID: 95000011262801466}
   m_Layer: 8
   m_Name: Blargh
   m_TagString: Untagged
@@ -68,7 +68,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.45, y: 4.6}
   m_EdgeRadius: 0
---- !u!95 &95000012361266796
+--- !u!95 &95000011262801466
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
