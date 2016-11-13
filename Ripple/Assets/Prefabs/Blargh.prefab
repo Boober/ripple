@@ -113,8 +113,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wasdControls: 1
+  playerInv: {fileID: 0}
+  pickupItems: []
   moveX: 0
   moveY: 0
+  closestnode: {fileID: 0}
+  NodesAll: []
+  tester: 1
 --- !u!212 &212000013895085970
 SpriteRenderer:
   m_ObjectHideFlags: 1
