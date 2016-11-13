@@ -67,16 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
-<<<<<<< HEAD
-    <Compile Include="Assets\Scripts\ImageOnButton.cs" />
-    <Compile Include="Assets\Scripts\InventoryObject.cs" />
-=======
     <Compile Include="Assets\Scripts\InventorySelect.cs" />
     <Compile Include="Assets\Scripts\KeyButton.cs" />
->>>>>>> 227e2db2ba01b28aa17fe28f5a8e8789fa3de7d3
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\PlayerInventory.cs" />
-    <Compile Include="Assets\Scripts\ToggleUI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
