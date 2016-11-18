@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     /// </summary>
 
     public List<string> pickupItems;
+    private List<GameObject> doorsInRange = new List<GameObject>(); 
 	private Rigidbody2D rb;
 	private Animator anim;
 	float speed = 10.0f;
@@ -57,16 +58,29 @@ public class PlayerController : MonoBehaviour {
     //To qualify as an item, a GameObject must 
     //		1. have a "Box Collider 2D" component with the "Is Trigger" box checked
     //		2. be tagged "Item"
+   //Also when the player encounters a door.
+
     void OnTriggerEnter2D(Collider2D other) {
 		if (pickupItems.Contains(other.gameObject.tag)) {
 			Debug.Log ("Over a " + other.name);
 			itemsInRange.Add (other.gameObject);
 		}
+        if (other.gameObject.tag == "Door")
+        {
+            doorsInRange.Add(other.gameObject);
+        }
 	}
 
 	//When the player is no longer in range of the item, forget the item
 	void OnTriggerExit2D(Collider2D other) {
-		itemsInRange.Remove (other.gameObject);
+        if (pickupItems.Contains(other.gameObject.tag))
+        {
+            itemsInRange.Remove(other.gameObject);
+        }
+        if (other.gameObject.tag == "Door")
+        {
+            doorsInRange.Remove(other.gameObject);
+        }
 	}
 
 	// Update is called once per frame
@@ -149,6 +163,10 @@ public class PlayerController : MonoBehaviour {
 				Destroy (item);
 				itemsInRange.Remove(item);
 			}
+            for (int i = 0; i < doorsInRange.Count; i++)
+            {
+                doorsInRange[i].SendMessage("ToggleDoor");
+            }
 		}
 
 	}
