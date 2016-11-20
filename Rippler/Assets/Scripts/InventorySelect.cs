@@ -22,7 +22,7 @@ public class InventorySelect : MonoBehaviour {
         capacity = gridTrans.childCount;
         setCurrButton();
         highlightKey();
-        Debug.Log("this should happen second");
+        //Debug.Log("this should happen second");
     }
 	
 	// Update is called once per frame
@@ -74,7 +74,7 @@ public class InventorySelect : MonoBehaviour {
         // secection . isHighlighted = true;
         if (currButton != null)
         {
-            Debug.Log("so what's the problem?");
+            //Debug.Log("so what's the problem?");
             currButton.isHighlighted = true;
             currButton.Up();
         }

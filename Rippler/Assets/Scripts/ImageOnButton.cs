@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 public class ImageOnButton: MonoBehaviour {
     public PlayerInventory playerInv;
@@ -25,16 +26,18 @@ public class ImageOnButton: MonoBehaviour {
         buttons.Add(b4);
         buttons.Add(b5);
 
-        //the following depends on what elements wil be pickable
-        Sprite taco = Resources.Load<Sprite>("Sprites/taco");  
-        Sprite lightbulb = Resources.Load<Sprite>("Sprites/lightbulb");
-        Sprite paper = Resources.Load<Sprite>("Sprites/paper");
-        Sprite key = Resources.Load<Sprite>("Sprites/key");
-        sprites.Add("taco", taco);
-        sprites.Add("lightbulb", lightbulb);
-        sprites.Add("paper", paper);
-        sprites.Add("key", key);                            
-        //
+        DirectoryInfo levelDirectoryPath = new DirectoryInfo("Assets/Resources/Sprites");
+        FileInfo[] fileInfo = levelDirectoryPath.GetFiles("*.*", SearchOption.AllDirectories);
+
+        foreach (FileInfo file in fileInfo)
+        {
+            if (file.Extension.Equals(".png"))
+            {
+                string object_name = file.Name.ToString().Substring(0, file.Name.ToString().Length - 4); // length('.png') == 4
+                Sprite obj = Resources.Load<Sprite>("Sprites/" + object_name);
+                sprites.Add(object_name, obj);
+            }
+        }
     }
 	
 	// Update is called once per frame
