@@ -35,7 +35,6 @@ public class verts
 
 }
 
-
 public class DynamicLight : MonoBehaviour {
 
 
@@ -56,8 +55,6 @@ public class DynamicLight : MonoBehaviour {
 
 	[Range(4,20)]
 	public int lightSegments = 8;
-	
-
 	
 	// Private variables
 	Mesh lightMesh;													// Mesh for our light mesh
@@ -84,7 +81,7 @@ public class DynamicLight : MonoBehaviour {
 		mFilter.mesh = lightMesh;															// Set this newly created mesh to the mesh filter
 		lightMesh.name = "Light Mesh";															// Give it a name
 		lightMesh.MarkDynamic ();
-        mrenderer.sortingLayerName = "BlueWalls";
+        mrenderer.sortingLayerName = "Coverage";
         mrenderer.sortingOrder = 0;
     }
 	
