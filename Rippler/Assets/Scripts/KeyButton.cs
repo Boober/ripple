@@ -26,7 +26,7 @@ public class KeyButton : MonoBehaviour {
 
 	void Start () {
         //isHighlighted = false;
-        Debug.Log("this should happen first");
+        //Debug.Log("this should happen first");
         button.targetGraphic = null;
         Up();
 	}

@@ -1,25 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 
 public class PlayerInventory : MonoBehaviour {
     public ImageOnButton buttonScript;
-    public Dictionary<string, InventoryObject> inventory;
+    public Dictionary<string, InventoryObject> types;
     public List<string> objects;
 	// Use this for initialization
 	void Start () {
-        inventory = new Dictionary<string, InventoryObject>();
+        types = new Dictionary<string, InventoryObject>();
 
-        //the following depends on the number of pickable items we have
-        inventory.Add("taco", new InventoryObject("taco"));
-        inventory.Add("lightbulb", new InventoryObject("lightbulb"));
-        inventory.Add("key", new InventoryObject("key"));
-        inventory.Add("paper", new InventoryObject("paper"));
-        //
+
+        DirectoryInfo levelDirectoryPath = new DirectoryInfo("Assets/Resources/Sprites");
+        FileInfo[] fileInfo = levelDirectoryPath.GetFiles("*.*", SearchOption.AllDirectories);
+
+        foreach (FileInfo file in fileInfo)
+        {
+            if(file.Extension.Equals(".png"))
+            {
+                string object_name = file.Name.ToString().Substring(0, file.Name.ToString().Length - 4); // length('.png') == 4
+                types.Add(object_name, new InventoryObject(object_name));
+            }
+        }
 
         //objects on the inventory bar max size is the size of the bar
         objects = new List<string>();
+
 	}
 	
 	// Update is called once per frame
@@ -31,9 +39,9 @@ public class PlayerInventory : MonoBehaviour {
     // removes objects from the inventory bar when the count reaches zero
     public void removeEmpty()
     {
-        foreach(string obj in inventory.Keys)
+        foreach(string obj in types.Keys)
         {
-            if(inventory[obj].getCount() <= 0)
+            if(types[obj].getCount() <= 0)
             {
                 objects.Remove(obj);
             }
@@ -47,12 +55,12 @@ public class PlayerInventory : MonoBehaviour {
         {
             objects.Add(obj);
         }
-        inventory[obj].increase();
+        types[obj].increase();
     }
 
     // removing objects from the inventory
     public void removeObject(string obj)
     {
-        inventory[obj].decrease();
+        types[obj].decrease();
     }
 }
