@@ -58,6 +58,11 @@ public class PlayerInventory : MonoBehaviour {
         types[obj].increase();
     }
 
+	public bool IsCarrying(string obj)
+	{
+		return objects.Contains (obj);
+	}
+
     // removing objects from the inventory
     public void removeObject(string obj)
     {
