@@ -32,6 +32,8 @@ public class InventorySelect : MonoBehaviour {
             activateKey();
         } else if (Input.GetKeyUp(keyUse)) {
             deactivateKey();
+            GameObject inventory = GameObject.FindGameObjectWithTag("Inventory");
+            inventory.SendMessage("AttemptUse", selection); //Tries to use the currently selected item.
         }
         if (Input.GetKeyDown(keyLeft)) {
             backward();
@@ -95,4 +97,8 @@ public class InventorySelect : MonoBehaviour {
             currButton.Up();
         }
     }
+
+    
+
+
 }

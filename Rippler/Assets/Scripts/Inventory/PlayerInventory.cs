@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-
 public class PlayerInventory : MonoBehaviour {
     public ImageOnButton buttonScript;
     public Dictionary<string, InventoryObject> types;
@@ -62,5 +61,20 @@ public class PlayerInventory : MonoBehaviour {
     public void removeObject(string obj)
     {
         types[obj].decrease();
+    }
+
+
+    //Player attempts to use the object in the available slot.
+    void AttemptUse(int index)
+    {
+        if (index < objects.Count)
+        {
+            //Attempts to use an item in the slot.
+            removeObject(objects[index]);
+        } else
+        {
+            //The slot didn't contain a usable object.
+            Debug.Log("No object in this slot.");
+        }
     }
 }

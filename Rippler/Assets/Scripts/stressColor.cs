@@ -16,23 +16,30 @@ public class stressColor : MonoBehaviour
 
     public Image image { get; private set; }
 
+    public Canvas c;
+    private bool canvasDisplayed;
+
     // Use this for initialization
     void Start()
     {
         image = GetComponent<Image>();
         updateColor();
+        c.gameObject.SetActive(!c.gameObject.activeInHierarchy);
+        InvokeRepeating("stressUp", 2.0f, .25f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(keyDown))
+        if (stressLevel == maxStress && !canvasDisplayed)
         {
-            stressDown();
-        }
-        else if (Input.GetKeyUp(keyUp))
-        {
-            stressUp();
+            
+            c.gameObject.SetActive(!c.gameObject.activeInHierarchy);
+            canvasDisplayed = true;
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("UI"))
+            {
+                obj.SetActive(false);
+            }
         }
     }
 

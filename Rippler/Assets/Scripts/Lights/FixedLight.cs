@@ -168,4 +168,17 @@ public class FixedLight : MonoBehaviour {
         lightMesh.triangles = triangleList.ToArray();
         lightMesh.RecalculateNormals();
     }
+
+
+    //Called when the lightbulb is either picked up by the player, or placed in the spot.
+    void ToggleLight()
+    {
+        Debug.Log("Lightbulb toggled.");
+        if (isCreated)
+        {
+            lightMesh.Clear();
+        }
+        isCreated = (isOn) ? true : false;
+        isOn = !isOn;
+    }
 }
