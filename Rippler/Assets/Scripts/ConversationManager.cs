@@ -79,18 +79,20 @@ public class ConversationManager : MonoBehaviour {
 		} else if (convoType == "Walker") {
 			options = new int[]{ 8, 18 };
 		} else {
-			options = new int[] { 6 };//, 3, 2 };
+			options = new int[] { 6, 3, 2 };
 		}
 	}
 
 
 
 	int SelectTask() {
+		Debug.Log("Selecting task from " + options.Length.ToString() + " options...");
 		return options [Random.Range (0, options.Length)];
 	}
 
 	void SetNextPossibleConversation (List<int> CurrentTasks) {
-		if (task == -1) { 
+		Debug.Log ("Current task: " + task.ToString ());
+		if (task <= 0) { 
 			//TODO: use conditionals to set Watson's initial BrewCoffee convo,
 			//and also the Follower's conversations.
 			//Note: 8 hardcoded as # of poss convos - if we had time it'd be nice to 
@@ -106,6 +108,7 @@ public class ConversationManager : MonoBehaviour {
 				Reset ();
 			}
 			*/
+			SpeakingTo.SendMessage ("ReturnToConversation", task);
 			SpeakingTo.SendMessage ("CheckIfReadyToTurnIn", task);
 		}
 	}
