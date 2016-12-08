@@ -18,7 +18,7 @@ public class FailMenuScript : MonoBehaviour {
     //User pressed the continue button, restart the level.
     public void ContinuePress()
     {
-        SceneManager.LoadScene("Level2",LoadSceneMode.Single);
+        SceneManager.LoadScene("Level01",LoadSceneMode.Single);
     }
 
 }

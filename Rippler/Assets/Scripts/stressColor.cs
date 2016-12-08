@@ -25,7 +25,7 @@ public class stressColor : MonoBehaviour
         image = GetComponent<Image>();
         updateColor();
         c.gameObject.SetActive(!c.gameObject.activeInHierarchy);
-        InvokeRepeating("stressUp", 2.0f, .25f);
+        InvokeRepeating("stressUp", 2.0f, 1.0f);
     }
 
     // Update is called once per frame
