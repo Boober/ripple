@@ -13,7 +13,7 @@ public class MainMenuScript : MonoBehaviour {
 	void FixedUpdate () {
         if (Input.anyKeyDown)
         {
-            SceneManager.LoadScene("Level2", LoadSceneMode.Single);
+            SceneManager.LoadScene("Level01", LoadSceneMode.Single);
         }
 	
 	}

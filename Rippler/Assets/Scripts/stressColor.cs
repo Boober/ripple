@@ -26,6 +26,7 @@ public class stressColor : MonoBehaviour
         updateColor();
         c.gameObject.SetActive(!c.gameObject.activeInHierarchy);
         InvokeRepeating("stressUp", 2.0f, 1.0f);
+        InvokeRepeating("increaseDelta", 2.0f, 60.0f);
     }
 
     // Update is called once per frame
@@ -47,7 +48,8 @@ public class stressColor : MonoBehaviour
     {
         if (stressLevel > 0)
         {
-            stressLevel -= deltaStress;
+            Debug.Log("Task Completed! Stress Decreased.");
+            stressLevel -= 40;
             if (stressLevel < 0)
                 stressLevel = 0;
         }
@@ -68,6 +70,11 @@ public class stressColor : MonoBehaviour
     public void updateColor()
     {
         image.color = Color.Lerp(unstressedColor, stressedColor, (float)stressLevel / (float)maxStress);
+    }
+
+    public void increaseDelta()
+    {
+        deltaStress = deltaStress * 2;
     }
 
 }

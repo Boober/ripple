@@ -38,7 +38,7 @@ public class ConversationManager : MonoBehaviour {
 		SpeakingTo = speakingTo;
 	}
 
-	/*
+    /*
 	IT: sandwich, paulcoffee
 	HR: checkbathroom, talkwatson, breakroom, lockeddoor
 	FD: fetchforms, stolencoffee
@@ -67,30 +67,47 @@ public class ConversationManager : MonoBehaviour {
 	ConvoCheckIT
 	*/
 
-	void InitOptions() {
-		if (convoType == "IT") {
-			options = new int[]{ 4, 9 };
-		} else if (convoType == "HR") {
-			options = new int[]{ 10, 11, 12, 13 };
-		} else if (convoType == "FD") {
-			options = new int[]{ 14, 15 };
-		} else if (convoType == "Boss") {
-			options = new int[]{ 1, 16, 17 };
-		} else if (convoType == "Walker") {
-			options = new int[]{ 8, 18 };
-		} else {
-			options = new int[] { 6 };//, 3, 2 };
-		}
-	}
+    void InitOptions()
+    {
+        if (convoType == "IT")
+        {
+            options = new int[] { 4, 9 };
+        }
+        else if (convoType == "HR")
+        {
+            options = new int[] { 10, 11, 12, 13 };
+            SpeakingTo.SendMessage("FinishTask", 16);
+        }
+        else if (convoType == "FD")
+        {
+            options = new int[] { 14, 15 };
+            SpeakingTo.SendMessage("FinishTask", 17);
+        }
+        else if (convoType == "Boss")
+        {
+            options = new int[] { 1, 16, 17 };
+            SpeakingTo.SendMessage("FinishTask", 11);
+        }
+        else if (convoType == "Walker")
+        {
+            options = new int[] { 8, 18 };
+        }
+        else
+        {
+            options = new int[] { 6, 3, 2 };
+        }
+    }
 
 
 
-	int SelectTask() {
+    int SelectTask() {
+		Debug.Log("Selecting task from " + options.Length.ToString() + " options...");
 		return options [Random.Range (0, options.Length)];
 	}
 
 	void SetNextPossibleConversation (List<int> CurrentTasks) {
-		if (task == -1) { 
+		Debug.Log ("Current task: " + task.ToString ());
+		if (task <= 0) { 
 			//TODO: use conditionals to set Watson's initial BrewCoffee convo,
 			//and also the Follower's conversations.
 			//Note: 8 hardcoded as # of poss convos - if we had time it'd be nice to 
@@ -106,6 +123,7 @@ public class ConversationManager : MonoBehaviour {
 				Reset ();
 			}
 			*/
+			SpeakingTo.SendMessage ("ReturnToConversation", task);
 			SpeakingTo.SendMessage ("CheckIfReadyToTurnIn", task);
 		}
 	}

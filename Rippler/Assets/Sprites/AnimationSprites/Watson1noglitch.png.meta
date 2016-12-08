@@ -1,0 +1,316 @@
+fileFormatVersion: 2
+guid: f6e3e630740423f40858c0a74de2f1b4
+timeCreated: 1481223425
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Watson1noglitch_0
+    21300002: Watson1noglitch_1
+    21300004: Watson1noglitch_2
+    21300006: Watson1noglitch_3
+    21300008: Watson1noglitch_4
+    21300010: Watson1noglitch_5
+    21300012: Watson1noglitch_6
+    21300014: Watson1noglitch_7
+    21300016: Watson1noglitch_8
+    21300018: Watson1noglitch_9
+    21300020: Watson1noglitch_10
+    21300022: Watson1noglitch_11
+    21300024: Watson1noglitch_12
+    21300026: Watson1noglitch_13
+    21300028: Watson1noglitch_14
+    21300030: Watson1noglitch_15
+    21300032: Watson1noglitch_16
+    21300034: Watson1noglitch_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Watson1noglitch_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_6
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_7
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_8
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_9
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_10
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_11
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_12
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_13
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_14
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_15
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_16
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Watson1noglitch_17
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 13
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

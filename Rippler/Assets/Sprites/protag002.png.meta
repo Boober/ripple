@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: a7c98845ffa51b1489e23e3bb9cd499e
-timeCreated: 1481232384
+guid: a1493040581c62046851adbd3cf710f8
+timeCreated: 1481232406
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: protag001-sheet_0
-    21300002: protag001-sheet_1
-    21300004: protag001-sheet_2
-    21300006: protag001-sheet_3
-    21300008: protag001-sheet_4
+    21300000: protag002_0
+    21300002: protag002_1
+    21300004: protag002_2
+    21300006: protag002_3
+    21300008: protag002_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -63,12 +63,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: protag001-sheet_0
+      name: protag002_0
       rect:
         serializedVersion: 2
         x: 14
         y: 6
-        width: 12
+        width: 11
         height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -76,12 +76,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: protag001-sheet_1
+      name: protag002_1
       rect:
         serializedVersion: 2
-        x: 54
+        x: 55
         y: 6
-        width: 10
+        width: 9
         height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -89,7 +89,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: protag001-sheet_2
+      name: protag002_2
       rect:
         serializedVersion: 2
         x: 94
@@ -102,12 +102,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: protag001-sheet_3
+      name: protag002_3
       rect:
         serializedVersion: 2
         x: 136
         y: 6
-        width: 9
+        width: 10
         height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,12 +115,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: protag001-sheet_4
+      name: protag002_4
       rect:
         serializedVersion: 2
-        x: 175
+        x: 174
         y: 6
-        width: 11
+        width: 12
         height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
