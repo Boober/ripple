@@ -6,6 +6,7 @@ public class FixedLight : MonoBehaviour {
 
     private bool isBox; //Checking whether the bounds are a box, or whether it should be a circle.
     public bool isOn; //Checks whether the light is on. If the light is off, we don't need to create the mesh!
+    private bool isCreated; //Checks whether the light mesh is already created so that it doesn't have to be generated every frame.
     private int numOfPoints = 20;
 
     public Material lightMaterial;
@@ -30,14 +31,17 @@ public class FixedLight : MonoBehaviour {
         mrenderer.sortingLayerName = "Coverage";
         mrenderer.sortingOrder = 0;
         isOn = true; //TODO: Possibly connect this with a lightswitch.
+        isCreated = false;
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        
-        renderLightMesh();
-        resetBounds();
+        if (!isCreated)
+        {
+            renderLightMesh();
+            resetBounds();
+        }
     }
 
     void renderLightMesh()
@@ -109,6 +113,7 @@ public class FixedLight : MonoBehaviour {
         Bounds b = lightMesh.bounds;
         b.center = Vector3.zero;
         lightMesh.bounds = b;
+        isCreated = true;
     }
 
     private void MakeRectangle()

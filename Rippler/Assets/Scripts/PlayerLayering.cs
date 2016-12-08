@@ -12,19 +12,22 @@ public class PlayerLayering : MonoBehaviour {
 	void Update () { 
 	  
 	}
-
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag.Equals("flip_layer"))
         {
-            playerRender.sortingLayerName = "UnderneathWall";
+            other.gameObject.SendMessage("Flip", false);
         }
     }
 
     //When the player is no longer in range of the item, forget the item
     void OnTriggerExit2D(Collider2D other)
     {
-        playerRender.sortingLayerName = "AboveWall";
+        if (other.tag.Equals("flip_layer"))
+        {
+            other.gameObject.SendMessage("Flip", true);
+        }
        
-    }
+    } 
 }

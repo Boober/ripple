@@ -14,13 +14,16 @@ public class Random_AI : MonoBehaviour
     private float totalTravel;
     public bool interactingWithPlayer;
 
+    private int currNodeIndex; //Keeping track of the current node
 
     // Use this for initialization
     void Start()
     {
         numNodes = nodes.Length;
         int r = (int)Random.Range(0, numNodes);
+        currNodeIndex = r;
         curNode = nodes[r];
+        nextNode = chooseNextNode();
         Vector3 startPos = new Vector3(curNode.transform.position.x, curNode.transform.position.y);
         transform.position = startPos;
         reachedNewNode = true;
@@ -29,8 +32,9 @@ public class Random_AI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        
         if (interactingWithPlayer == false)
         {
             if (reachedNewNode == true)
@@ -75,21 +79,20 @@ public class Random_AI : MonoBehaviour
     }
 
 
+    //Randomly chooses the next node from a set of nodes attached to this Script.
+
     GameObject chooseNextNode()
     {
         while (true)
         {
             int r = (int)Random.Range(0, numNodes);
-            nextNode = nodes[r];
-            if (nextNode != curNode && isLegal(curNode, nextNode))
+            if (currNodeIndex != r)
             {
+                nextNode = nodes[r];
+                currNodeIndex = r;
                 break;
             }
         }
-
         return nextNode;
     }
-
-
 }
-
